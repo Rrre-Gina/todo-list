@@ -20,7 +20,7 @@ const Note = ({ item }:  note) => {
                 <input type='checkbox' checked={ item.status } onChange={ (e) => dispatch(toggleNote({id, e})) } />
                 <p className={'note__text' + (item.status ? ' done' : '')}>{ item.text }</p>
             </div>
-            <img src='../../delete.png' alt='delete icon' onClick={ () => dispatch(deleteNote(id)) } />
+            <img src={ process.env.PUBLIC_URL + '/delete.png' } alt='delete icon' onClick={ () => dispatch(deleteNote(id)) } />
         </div>
     )
 }
