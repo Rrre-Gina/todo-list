@@ -15,10 +15,10 @@ const AddNote = () => {
     }
     
     return (
-        <div className='flex form'> 
+        <form className='flex form'> 
             <input type='text' className='input' defaultValue='' ref={ text } />
             <button className='btn' onClick={(e) => handleAdd(e) }>Добавить</button>
-        </div>
+        </form>
     )
 }
 
